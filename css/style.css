@@ -2,6 +2,7 @@
     /*colores*/
     --color-primario: #f78154;
     --color-secundario: #f2c14e;
+    --color-secundario-opacity: #f2c14e80;
     --color-terciario: #5fad56;
     --color-blanco: #ffffff;
     --color-negro: #222222;
@@ -43,4 +44,74 @@
     flex-direction: column;
     gap: 1rem;
   }
+
+  .gap-0 {
+    gap: 0;
+  }
+
+  body {
+    background-image: url(../assets/img/bg-hero.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--color-blanco);
+    padding-bottom: 1rem;
+  }
   
+  .bg-hero {
+    background-color: var(--color-secundario-opacity); 
+    min-height: inherit;
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+  }
+
+  .title {
+    padding: 1rem 0;
+    text-align: center;
+    font-size: var(--fs-title-h1);
+  }
+  .description {
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: var(--fs-title-h2);
+  }
+
+  .survey-form {
+    background-color: var(--color-primario);
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  .label {
+    font-weight: bold;
+    font-size: var(--fs-label);
+    padding: .5rem 0;
+  }
+
+  label.gap-0 input,
+  label.gap-0 select,
+  label.gap-0 textarea,
+  .btn-submit{
+    padding: .5rem;
+    color: var(--color-negro);
+    font-family: "Lato", sans-serif;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  label.gap-0 textarea{
+    resize: none;
+    min-height: 100px;
+  }
+
+  .btn-submit {
+    background-color: var(--color-terciario);
+    color: var(--color-blanco);
+    font-weight: bold;
+    font-size: var(--fs-label);
+    border: none;
+  }
