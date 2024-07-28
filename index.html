@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina de formulario</title>
+    <!-- Google Font - Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Font - Lato -->
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">
+      Thank you for taking the time to help us improve the platform
+    </p>
+    <form id="survey-form">
+      <label id="name-label">
+        <span>Name</span>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+      </label>
+      <label id="email-label">
+          <span>Email</span>
+          <input type="email" id="email" name="email" pattern="/\S+@\S+\.\S+/" title="Debe ser un email valido" placeholder="Enter your email" required />
+        </label>
+        <label id="number-label">
+          <span>Age</span>
+          <input type="number" id="number" name="number" pattern="/^\d*$/; //" title="Solo se admiten numeros positivos" min="18" max="120" placeholder="Age" required />
+        </label>
+        <label>
+            <span>Which option best describes your current role?</span>
+            <select name="dropdown" id="dropdown">
+                <option value="" disabled selected>Select current role</option>
+                <option value="student">Student</option>
+                <option value="full-time-job">Full Time Job</option>
+                <option value="full-time-learner">Full Time Learner</option>
+                <option value="prefer-not-to-say">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+        </label>
+        <label>
+            <span>Would you recommend freeCodeCamp to a friend?</span>
+            <input type="radio" name="recommend" id="definitely" checked>
+            <span>Definitely</span>
+            <input type="radio" name="recommend" id="maybe">
+            <span>Maybe</span>
+            <input type="radio" name="recommend" id="not-sure">
+            <span>Not sure</span>
+        </label>
+    </form>
+  </body>
+</html>
